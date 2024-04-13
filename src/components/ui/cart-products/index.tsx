@@ -41,12 +41,14 @@ export function CartProducts({  photo, name, price, quantity, onAddToCart, onRem
       </S.WrapperImageNext>
       <S.WrapperDetails>
         <S.Name>{name}</S.Name>
-        <Counter
-          quantity={quantity}
-          onIncrement={incrementQuantity}
-          onDecrement={decrementQuantity}  
-        />
-        <S.Price>R${price}</S.Price>
+        <S.WrapperCounterAndPrice>
+          <Counter
+            quantity={quantity}
+            onIncrement={incrementQuantity}
+            onDecrement={decrementQuantity}  
+          />
+          <S.Price>R${price}</S.Price>
+        </S.WrapperCounterAndPrice>
       </S.WrapperDetails>
     </S.Wrapper>
   );

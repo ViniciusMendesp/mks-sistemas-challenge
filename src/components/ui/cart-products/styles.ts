@@ -24,6 +24,7 @@ width: 80%;
 height: auto;
 `
 
+
 export const WrapperDetails = styled.div`
 display: flex;
 padding: 20px;
@@ -32,12 +33,20 @@ justify-content: space-between;
 align-items: center;
 `
 
-export const Name = styled.span`
+export const WrapperCounterAndPrice = styled.div`
+ @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+`
 
+export const Name = styled.span`
 width: 100px;
 font-size: 0.875rem;
 font-weight: regular;
 `
+
 
 export const Price = styled.span`
 font-size: 0.875rem;

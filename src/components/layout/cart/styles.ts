@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const mobileAndTablet = `@media (max-width: 768px)`;
+
 export const Wrapper = styled.div<{ $isVisible: boolean }>`
   position: absolute;
   top: 0;
@@ -11,6 +13,10 @@ export const Wrapper = styled.div<{ $isVisible: boolean }>`
   box-shadow: -10px 0 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: ${(props) => (props.$isVisible ? "block" : "none")};
+
+  ${mobileAndTablet} {
+    width: 80%;
+  }
 `
 
 export const Content = styled.div`
@@ -18,6 +24,10 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
+  ${mobileAndTablet} {
+    padding: 0.5rem; /* Reduz o padding em dispositivos móveis e tablets */
+  }
 `
  
 export const WrapperItens = styled.div`
@@ -26,6 +36,10 @@ export const WrapperItens = styled.div`
   justify-content: space-between;
   height: 100%;
   padding: 2.5rem;
+
+  ${mobileAndTablet} {
+    padding: 0.5rem;
+  }
 `
 
 export const WrapperProductsTitleAndButton = styled.div`
@@ -43,6 +57,9 @@ export const Title = styled.h2`
   font-size: 1.75rem;
   font-weight: bold;
 
+  ${mobileAndTablet} {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte em dispositivos móveis e tablets */
+  }
 `
 
 export const ButtonClose = styled.button`
@@ -54,6 +71,10 @@ export const ButtonClose = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  ${mobileAndTablet} {
+    padding: 0.5rem; /* Reduz o padding em dispositivos móveis e tablets */
+  }
 `
 
 export const WrapperProducts = styled.div`

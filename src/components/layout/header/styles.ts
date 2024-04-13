@@ -5,6 +5,8 @@ export const Wrapper = styled.div`
   background-color: var(--primary);
   color: var(--background);
   position: relative;
+
+  min-width: 100%;
 `
 
 export const Header = styled.header`
