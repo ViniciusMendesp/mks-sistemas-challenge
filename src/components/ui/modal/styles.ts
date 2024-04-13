@@ -16,12 +16,25 @@ export const ModalContent = styled.div`
   background-color: white;
   padding: 2rem;
   border-radius: 8px;
-  width: 25%;
+  
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
   text-align: center;
+
+
+  @media (max-width: 1024px) { 
+    width: 35%;
+  }
+
+  @media (max-width: 768px) { 
+    width: 55%;
+  }
+
+  @media (max-width: 480px) { 
+    width: 85%;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
