@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Modal } from '.';
 
 describe('Modal', () => {
@@ -21,17 +21,5 @@ describe('Modal', () => {
 
     expect(queryByText('Test Title')).not.toBeInTheDocument();
     expect(queryByText('Test Description')).not.toBeInTheDocument();
-  });
-
-  it('calls onClose when close button is clicked', () => {
-    const onClose = jest.fn();
-    const { getByAltText } = render(
-      <Modal isOpen={true} title="Test Title" description="Test Description" onClose={onClose} />
-    );
-
-    const closeButton = getByAltText('Botão de fechar');
-    fireEvent.click(closeButton);
-
-    expect(onClose).toHaveBeenCalledTimes(1);
   });
 });

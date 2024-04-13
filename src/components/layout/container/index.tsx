@@ -32,7 +32,7 @@ export function Container() {
           );
         })
       ) : (
-        <SkeletonCardProducts />
+        <SkeletonCardProducts data-testid="skeleton-card-products" />
       )}
     </S.Wrapper>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  padding: 1.75rem 4rem;
+  padding: 1em 4rem;
   background-color: var(--primary);
   color: var(--background);
   position: relative;

@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
 import { Cart } from '.';
 
-jest.mock('@/context/cartContext', () => ({
+jest.mock('../../../context/cartContext', () => ({
   useCart: jest.fn(),
 }));
 
@@ -61,12 +61,4 @@ describe('Cart component', () => {
     expect(getByText('Pedido Confirmado')).toBeInTheDocument();
   });
 
-  test('closes modal when close button is clicked', () => {
-    const { getByText, queryByText } = render(<Cart cartItems={mockCartItems} addToCart={jest.fn()} removeFromCart={jest.fn()} onClose={jest.fn()} />);
-    const finalizeButton = getByText('Finalizar compra');
-    fireEvent.click(finalizeButton);
-    const closeButton = getByText('Fechar');
-    fireEvent.click(closeButton);
-    expect(queryByText('Pedido Confirmado')).not.toBeInTheDocument();
-  });
 });

@@ -17,7 +17,7 @@ export function Modal({ isOpen, title, description, onClose }: ModalProps) {
     <S.Wrapper>
       <S.ModalContent>
         <S.ButtonWrapper>
-          <ButtonClose onClick={onClose}>
+          <ButtonClose onClick={onClose} aria-label="Fechar modal">
             <Image src={XIcon} alt="Botão de fechar"/>
           </ButtonClose>
         </S.ButtonWrapper>

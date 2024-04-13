@@ -15,6 +15,7 @@ interface CartProductsProps {
   quantity: number
   onAddToCart: (product: AddToCardProps, quantity: number) => void;
   onRemoveFromCart: () => void
+
 }
 
 export function CartProducts({  photo, name, price, quantity, onAddToCart, onRemoveFromCart }: CartProductsProps) {
@@ -28,7 +29,9 @@ export function CartProducts({  photo, name, price, quantity, onAddToCart, onRem
   };
 
   const decrementQuantity = () => {
-    onRemoveFromCart();
+    if (quantity > 1) {
+      onRemoveFromCart();
+    }
   };
 
   return (

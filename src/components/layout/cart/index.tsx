@@ -24,9 +24,7 @@ export function Cart({ onClose }: CartProps) {
       setIsModalOpen(true);
       
       cartItems.forEach((product) => {
-        for (let i = 0; i < product.quantity; i++) {
-          removeFromCart(String(product.id)); 
-        }
+        removeFromCart(String(product.id), product.quantity);
       });
     }
   };
@@ -47,7 +45,7 @@ export function Cart({ onClose }: CartProps) {
   }, 0);
 
   return (
-    <S.Wrapper isVisible>
+    <S.Wrapper $isVisible>
       <S.Content>
       <S.WrapperItens>
         <S.WrapperProductsTitleAndButton>

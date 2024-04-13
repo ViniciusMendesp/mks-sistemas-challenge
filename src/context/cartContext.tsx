@@ -1,18 +1,12 @@
-// components/cart/CartContext.tsx
 import { Product } from "@/pages/api/get-products";
 import { createContext, ReactNode, useContext, useState } from "react";
-
 interface CartContextType {
   cartItems: Product[];
   addToCart: (product: Product, quantity?: number) => void;
-  removeFromCart: (productId: string) => void;
+  removeFromCart: (productId: string, quantity?: number) => void;
 }
 
-interface CartProviderProps {
-  children: ReactNode
-}
-
-const CartContext = createContext<CartContextType | undefined>(undefined);
+export const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const useCart = () => {
   const context = useContext(CartContext);
@@ -21,6 +15,10 @@ export const useCart = () => {
   }
   return context;
 };
+
+interface CartProviderProps {
+  children: ReactNode
+}
 
 export const CartProvider  = ({ children }: CartProviderProps) => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
@@ -37,12 +35,16 @@ export const CartProvider  = ({ children }: CartProviderProps) => {
     }
   };
 
-
-  const removeFromCart = (productId: string) => {
-    const updatedCartItems = cartItems
-      .map(item => (item.id === Number(productId) ? { ...item, quantity: item.quantity - 1 } : item))
-      .filter(item => item.quantity > 0);
-    setCartItems(updatedCartItems);
+  const removeFromCart = (productId: string, quantityToRemove?: number) => {
+    setCartItems((prevItems) => {
+      return prevItems.filter((item) => {
+        if (item.id === Number(productId)) {
+          const updatedQuantity = quantityToRemove ? item.quantity - quantityToRemove : item.quantity - 1;
+          return updatedQuantity > 0; 
+        }
+        return true;
+      });
+    });
   };
 
   return (

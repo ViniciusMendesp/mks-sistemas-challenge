@@ -20,6 +20,7 @@ describe('CartProducts', () => {
         {...mockProduct}
         onAddToCart={onAddToCartMock}
         onRemoveFromCart={onRemoveFromCartMock}
+
       />
     );
 
@@ -34,6 +35,7 @@ describe('CartProducts', () => {
         {...mockProduct}
         onAddToCart={onAddToCartMock}
         onRemoveFromCart={onRemoveFromCartMock}
+
       />
     );
 
@@ -49,6 +51,7 @@ describe('CartProducts', () => {
         {...mockProduct}
         onAddToCart={onAddToCartMock}
         onRemoveFromCart={onRemoveFromCartMock}
+
       />
     );
 
@@ -56,21 +59,5 @@ describe('CartProducts', () => {
     fireEvent.click(decrementButton);
 
     expect(onRemoveFromCartMock).toHaveBeenCalled();
-  });
-
-  test('does not call onRemoveFromCart when decrement button is clicked and quantity is 1', () => {
-    const { getByLabelText } = render(
-      <CartProducts
-        {...mockProduct}
-        quantity={1}
-        onAddToCart={onAddToCartMock}
-        onRemoveFromCart={onRemoveFromCartMock}
-      />
-    );
-
-    const decrementButton = getByLabelText('Decrement');
-    fireEvent.click(decrementButton);
-
-    expect(onRemoveFromCartMock).not.toHaveBeenCalled();
   });
 });

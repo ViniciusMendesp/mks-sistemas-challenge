@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div<{ isVisible: boolean }>`
+export const Wrapper = styled.div<{ $isVisible: boolean }>`
   position: absolute;
   top: 0;
   right: 0;
@@ -10,7 +10,7 @@ export const Wrapper = styled.div<{ isVisible: boolean }>`
   color: white;
   box-shadow: -10px 0 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  display: ${(props) => (props.isVisible ? "block" : "none")};
+  display: ${(props) => (props.$isVisible ? "block" : "none")};
 `
 
 export const Content = styled.div`

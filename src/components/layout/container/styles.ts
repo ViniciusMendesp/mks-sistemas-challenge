@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 32px;
- padding: 90px 540px;
+  padding: 3.125rem 33.75rem;
 
   @media (max-width: 768px) { // Para telas de tamanho de tablet
     grid-template-columns: repeat(2, 1fr);
