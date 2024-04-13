@@ -1,40 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## MKS Sistemas - Desafio de Desenvolvimento
 
-## Getting Started
+Este projeto é parte de um desafio de desenvolvimento proposto com o objetivo de demonstrar proficiência na elaboração de uma aplicação que consome uma API REST de produtos para exibir uma lista de produtos de uma loja virtual. A seguir, serão apresentados detalhes sobre o projeto, sua estrutura e os recursos utilizados.
 
-First, run the development server:
+### Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O desafio consiste em criar uma aplicação com as seguintes funcionalidades:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Loja:** Exibir uma lista de produtos obtidos através de uma API REST. Utilizar um efeito de carregamento (shimmer/skeleton) enquanto os dados estão sendo carregados.
+- **Carrinho:** Permitir a seleção de produtos, adicionando-os ao carrinho e possibilitando o aumento da quantidade de cada produto selecionado.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Recursos Utilizados
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **TypeScript:** Linguagem de programação utilizada para desenvolver a aplicação, garantindo tipagem estática e maior segurança no código.
+- **React/Next.js:** Framework utilizado para a construção da aplicação, proporcionando uma estrutura robusta e eficiente para o desenvolvimento de aplicações web.
+- **React-query:** Biblioteca utilizada para gerenciar o estado global da aplicação e realizar requisições assíncronas à API de produtos.
+- **Styled-components:** Biblioteca utilizada para estilizar os componentes da aplicação de forma modular e eficiente.
+- **Framer-motion:** Biblioteca utilizada para adicionar animações e transições aos elementos da interface, proporcionando uma experiência de usuário mais dinâmica.
+- **Jest e Testing-library:** Bibliotecas utilizadas para escrever testes unitários, garantindo a qualidade e confiabilidade do código.
