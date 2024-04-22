@@ -34,6 +34,10 @@ align-items: center;
 `
 
 export const WrapperCounterAndPrice = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
  @media (max-width: 480px) {
     display: flex;
     flex-direction: column;
