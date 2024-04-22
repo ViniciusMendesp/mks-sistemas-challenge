@@ -1,5 +1,8 @@
 ## MKS Sistemas - Desafio de Desenvolvimento
 
+![image](https://github.com/ViniciusMendesp/mks-sistemas-challenge/assets/63562960/ea55af65-b848-40ae-be48-721d50cc9f00)
+
+
 Este projeto é parte de um desafio de desenvolvimento proposto com o objetivo de demonstrar proficiência na elaboração de uma aplicação que consome uma API REST de produtos para exibir uma lista de produtos de uma loja virtual. A seguir, serão apresentados detalhes sobre o projeto, sua estrutura e os recursos utilizados.
 
 ### Descrição
